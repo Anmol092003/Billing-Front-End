@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Color Scheme: Warm Orange & Light */
+:root {
+    --primary-color: #d97706;
+    --accent-color: #f97316;
+    --light-bg: #fef6f1;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --border-light: #e0d5c7;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+/* Bootstrap Button Overrides */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: #b45309 !important;
+    border-color: #b45309 !important;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #92400e !important;
+    border-color: #92400e !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Table Styles */
+.table {
+    color: var(--text-dark);
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.table td {
+    border-color: var(--border-light);
+}
+
+.table tbody tr:hover {
+    background-color: #fff8f3;
+}
+
+/* Form Controls */
+.form-control {
+    border-color: var(--border-light);
+    color: var(--text-dark);
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(249, 115, 22, 0.25);
+}
+
+/* Cards */
+.card {
+    border-color: var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-light .navbar-brand {
+    color: var(--primary-color);
+}
+
+/* Badges */
+.badge-primary {
+    background-color: var(--primary-color);
+}
+
+.badge-secondary {
+    background-color: var(--text-light);
+}
