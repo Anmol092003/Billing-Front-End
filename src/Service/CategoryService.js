@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_BASE_URL, API_VERSION } from "../util/constants";
 
 const getAuthHeader = () => {
     const token = localStorage.getItem("token");
@@ -8,7 +9,7 @@ const getAuthHeader = () => {
 
 export const addCategory = async (category) => {
     return await axios.post(
-        "http://localhost:8080/api/v1.0/admin/categories",
+        `${API_BASE_URL}/api/${API_VERSION}/admin/categories`,
         category,
         { headers: getAuthHeader() }
     );
@@ -16,14 +17,14 @@ export const addCategory = async (category) => {
 
 export const deleteCategory = async (categoryId) => {
     return await axios.delete(
-        `http://localhost:8080/api/v1.0/admin/categories/${categoryId}`,
+        `${API_BASE_URL}/api/${API_VERSION}/admin/categories/${categoryId}`,
         { headers: getAuthHeader() }
     );
 };
 
 export const fetchCategories = async () => {
     return await axios.get(
-        "http://localhost:8080/api/v1.0/categories",
+        `${API_BASE_URL}/api/${API_VERSION}/categories`,
         { headers: getAuthHeader() }
     );
 };
